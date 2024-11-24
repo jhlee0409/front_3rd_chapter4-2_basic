@@ -7,8 +7,16 @@
     <title>Home - Tech Shop</title>
     <link
       href="https://fonts.googleapis.com/css?family=Heebo:300,400,600,700&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Heebo:300,400,600,700&display=swap"
+      />
+    </noscript>
     <link rel="stylesheet" href="/css/styles.css" />
     <!-- <link rel="stylesheet" type="text/css" href="/css/slick.css"/> -->
     <!-- Google Tag Manager -->
@@ -31,8 +39,9 @@
       type="text/javascript"
       src="//www.freeprivacypolicy.com/public/cookie-consent/4.1.0/cookie-consent.js"
       charset="UTF-8"
+      defer
     ></script>
-    <script type="text/javascript" charset="UTF-8">
+    <script type="text/javascript" charset="UTF-8" defer>
       document.addEventListener("DOMContentLoaded", function () {
         cookieconsent.run({
           notice_banner_type: "simple",
