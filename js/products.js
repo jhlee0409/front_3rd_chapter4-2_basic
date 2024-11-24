@@ -2,7 +2,7 @@ const skeleton = () => {
   const create = () => {
     const container = document.querySelector("#all-products .container");
 
-    Array.from({ length: 30 }).forEach(() => {
+    Array.from({ length: 15 }).forEach(() => {
       const skeleton = document.createElement("div");
       skeleton.classList.add("skeleton");
       container.appendChild(skeleton);
@@ -18,15 +18,12 @@ const skeleton = () => {
   return { create, removeAll };
 };
 
+const { create, removeAll } = skeleton();
+
 async function loadProducts() {
-  const { create, removeAll } = skeleton();
-
-  create();
-
   const response = await fetch("https://fakestoreapi.com/products");
   const products = await response.json();
   displayProducts(products);
-
   removeAll();
 }
 
@@ -87,6 +84,7 @@ function displayProducts(products) {
   });
 }
 
+// create();
 loadProducts();
 
 // Simulate heavy operation. It could be a complex price calculation.
