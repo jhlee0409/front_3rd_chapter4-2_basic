@@ -220,6 +220,14 @@ section.best-sellers .product-slider .product {
 
 section.best-sellers .product-slider .product img {
   max-width: 40%;
+  height: auto;
+}
+
+section.best-sellers .product-slider .skeleton {
+  width: 30%;
+  margin: 8px;
+  height: 500px;
+  background-color: #ddd;
 }
 
 section.best-sellers .product-slider .product .product-picture {
